@@ -20,6 +20,7 @@ h3 {
 
 p {
 	margin-bottom: 20px;
+	color: white;
 }
 
 /*Efeito Parallax
@@ -56,4 +57,73 @@ p {
 	font-size: 25px;
 	letter-spacing: 5px;
 	text-transform: uppercase;
+}
+
+footer {
+	position: relative;
+	height: 50%;
+	background-color: black;
+	display: flex;
+}
+
+.conteudo-footer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.endereco {
+	color: white;
+	left: 10px;
+	font-size: 12px;
+}
+
+.conteudo-footer, .icon-map {
+	color: yellow;
+}
+.endereco-icon {
+	margin-bottom: 10px;
+}
+
+.text-maps {
+	color: white;
+	font-size: 20px;
+}
+
+.left-content > h1 {
+	margin-left: 70px;
+}
+
+.conteudo > p {
+	color: black;
+}
+
+.all-rights {
+	color: white;
+	font-size: 15px;
+
+}
+
+.container-all-rights {
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	height: 25%;
+	width: 100%;
+	margin-top: 0px;
+}
+
+.divider {
+	height: 20%;
+	width: 100%;
+	background-color: black;
+}
+
+.border-line {
+	height: 1px;
+	border-top: 1px solid white;
+	width: 70%;
+	background-color: black;
 }
