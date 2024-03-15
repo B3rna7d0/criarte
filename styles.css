@@ -1,24 +1,59 @@
-
-body{
-	font-family: Arial, Helvetica, sans-serif,sans-serif;
-    font-size: 10em;
+body, html {
+	margin: 0;
+	font: 16px 'Lato', sans-serif;
+	color: #777;
+	height: 100%;
 }
 
-.navbar-light .navbar-nav .nav-link{
+.conteudo {
+	color: #777;
+	background-color: #fff;
+	text-align: justify;
+	padding: 50px 80px;
+}
+
+h3 {
+	text-transform: uppercase;
+	color: #111;
+	text-align: center;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+/*Efeito Parallax
+*****************/
+.caixa1, .caixa2 {
+	position: relative;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.caixa1 {
+	background-image: url(imagens/foto01.jpg);
+}
+
+.caixa2 {
+	background-image: url(imagens/foto02.jpg);
+}
+
+.conteudo-titulo {
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+}
+
+.conteudo-titulo span.titulo {
 	color: #fff;
-}
-
-.navbar-light .navbar-nav .nav-link:hover{
-	color: #9bf0e1;
-}
-
-.navbar-light .navbar-toggler {
-	color: rgba(0, 0, 0, 0.5);
-	border-color: rgba(255,255,255, 0.5);
-}
-
-.divisor {
-	width: 1px;
-	background: white;
-	margin: 12px 15px;
+	background-color: #111;
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
 }
