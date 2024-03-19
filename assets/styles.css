@@ -35,7 +35,9 @@ p {
 }
 
 .caixa1 {
-	background-image: url(imagens/foto01.jpg);
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+	url(imagens/foto01.jpg);
+	height: 100%;
 }
 
 .caixa2 {
@@ -59,11 +61,21 @@ p {
 	text-transform: uppercase;
 }
 
+.contact, .icon {
+	width: 65px;
+	height: 65px;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	display: inline-flex;
+}
+
 footer {
 	position: relative;
 	height: 50%;
-	background-color: black;
 	display: flex;
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+	url(imagens/back-footer.jpg);
 }
 
 .conteudo-footer {
@@ -103,27 +115,56 @@ footer {
 .all-rights {
 	color: white;
 	font-size: 15px;
-
 }
 
 .container-all-rights {
-	background-color: black;
 	display: flex;
 	justify-content: center;
 	height: 25%;
 	width: 100%;
 	margin-top: 0px;
+	border: 1px red solid;
 }
 
-.divider {
-	height: 20%;
-	width: 100%;
-	background-color: black;
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	.btn-custom {
+		margin: 10px 15px;
+		font-size: 1em;
+	}
+	.google-maps {
+		height: 50%;
+    	width: 50%;
+	}
 }
 
-.border-line {
-	height: 1px;
-	border-top: 1px solid white;
-	width: 70%;
-	background-color: black;
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	h1 {
+		font-size: 3em;
+	}
+	.btn-custom {
+		margin: 10px 15px;
+	}
+ }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	h1 {
+		font-size: 4em;
+	}
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	h1 {
+		font-size: 5em;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	h1 {
+		font-size: 6em;
+	}
 }
