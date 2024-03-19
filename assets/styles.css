@@ -5,7 +5,7 @@ body, html {
 	height: 100%;
 }
 
-.conteudo {
+.information-page {
 	color: #777;
 	background-color: #fff;
 	text-align: justify;
@@ -18,9 +18,9 @@ h3 {
 	text-align: center;
 }
 
-p {
+.information-page > p {
 	margin-bottom: 20px;
-	color: white;
+	color: black;
 }
 
 /*Efeito Parallax
@@ -36,20 +36,17 @@ p {
 
 .caixa1 {
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-	url(imagens/foto01.jpg);
+	url(/assets/imagens/foto01.jpg);
 	height: 100%;
 }
 
 .caixa2 {
-	background-image: url(imagens/foto02.jpg);
+	background-image: url(/assets/imagens/foto02.jpg);
 }
 
 .conteudo-titulo {
-	position: absolute;
-	left: 0%;
-	top: 50%;
-	width: 100%;
-	text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .conteudo-titulo span.titulo {
@@ -59,6 +56,7 @@ p {
 	font-size: 25px;
 	letter-spacing: 5px;
 	text-transform: uppercase;
+	margin-top: 40px;
 }
 
 .contact, .icon {
@@ -71,19 +69,16 @@ p {
 }
 
 footer {
-	position: relative;
-	height: 50%;
-	display: flex;
 	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-	url(imagens/back-footer.jpg);
+	url(/assets/imagens/back-footer.jpg);
+	width: 100%;
 }
 
 .conteudo-footer {
-    display: flex;
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 3.5rem;
     width: 100%;
-	justify-content: center;
-	align-items: center;
 }
 
 .endereco {
@@ -105,11 +100,11 @@ footer {
 }
 
 .left-content > h1 {
-	margin-left: 70px;
+	margin-left: 0px;
 }
 
-.conteudo > p {
-	color: black;
+.left-content > p {
+	color: white;
 }
 
 .all-rights {
@@ -123,7 +118,12 @@ footer {
 	height: 25%;
 	width: 100%;
 	margin-top: 0px;
-	border: 1px red solid;
+	border-top: 1px white solid;
+}
+
+.left-content {
+	display: flex;
+	justify-content: flex-start;
 }
 
 /* Extra small devices (portrait phones, less than 576px)*/
@@ -136,7 +136,7 @@ footer {
 		height: 50%;
     	width: 50%;
 	}
-}
+} 
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) { 
@@ -167,4 +167,10 @@ footer {
 	h1 {
 		font-size: 6em;
 	}
+} 
+@media screen and (max-width: 768px) {
+    .conteudo-footer {
+        grid-template-columns:repeat(1, 1fr);
+        gap: 2rem;
+    }
 }
