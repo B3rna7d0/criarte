@@ -5,27 +5,27 @@ body, html {
 	height: 100%;
 }
 
-.information-page {
+.content {
 	color: #777;
 	background-color: #fff;
 	text-align: justify;
 	padding: 50px 80px;
 }
 
-.information-page > h3 {
+h3 {
 	text-transform: uppercase;
 	color: #111;
 	text-align: center;
 }
 
-.information-page > p {
+p {
 	margin-bottom: 20px;
-	color: black;
+	color: white;
 }
 
 /*Efeito Parallax
 *****************/
-.caixa1, .caixa2 {
+.box1, .box2 {
 	position: relative;
 	height: 100%;
 	background-repeat: no-repeat;
@@ -34,30 +34,118 @@ body, html {
 	background-attachment: fixed;
 }
 
-.caixa1 {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-	url(/assets/imagens/foto01.jpg);
-	height: 100%;
+.box1 {
+	/*background-image: url(imagens/marketing-digital.webp);*/
+	background-color: #000000;
+	
 }
 
-.caixa2 {
-	background-image: url(/assets/imagens/foto02.jpg);
+.box2 {
+	background-image: url(imagens/box2_back.png);
 }
 
-.conteudo-titulo {
-    display: flex;
-    justify-content: center;
+.content-title {
+	position:absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	text-align: center;
+	background-color: #000000;
+
+	
 }
 
-.conteudo-titulo span.titulo {
+.content-title span.title {
 	color: #fff;
-	background-color: #111;
-	padding: 18px;
+	padding: 10px;
 	font-size: 25px;
-	letter-spacing: 5px;
-	text-transform: uppercase;
-	margin-top: 40px;
-    border-radius: 20px;
+	letter-spacing: 10px;
+	border-radius: 30px;
+	color: rgb(255, 255, 255);
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	
+}
+
+
+.container {
+	position: relative;
+    height: 100%; /* Ajuste conforme necessário */
+    flex: 1;
+	display: flex;
+}
+
+.imagem-marketing {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.description-marketing {
+	position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+.description-marketing h2 {
+    margin-top: 0;
+	color:#fbca1f;
+}
+
+.description-marketing p {
+    margin-bottom: 0;
+	color:#fff;
+}
+
+.content > p {
+	color: #000;
+}
+
+button {
+	background: #fbca1f;
+	font-family: inherit;
+	padding: 0.6em 1.3em;
+	font-weight: 900;
+	font-size: 18px;
+	border: 3px solid black;
+	border-radius: 1em;
+	box-shadow: 0.1em 0.1em;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	transform: translate(-0.05em, -0.05em);
+	box-shadow: 0.15em 0.15em;
+  }
+  
+  button:active {
+	transform: translate(0.05em, 0.05em);
+	box-shadow: 0.05em 0.05em;
+}
+
+.button-box-1, .button-box-2 {
+	background: #fbca1f;
+	font-family: inherit;
+	padding: 0.6em 1.3em;
+	font-weight: 900;
+	font-size: 18px;
+	border: 3px solid black;
+	border-radius: 1em;
+	box-shadow: 0.1em 0.1em;
+	cursor: pointer;
+	display: flex;
+  }
+  
+  .button-box-1, .button-box-2:hover {
+	transform: translate(-0.05em, -0.05em);
+	box-shadow: 0.15em 0.15em;
+  }
+  
+  .button-box-1, .button-box-2:active {
+	transform: translate(0.05em, 0.05em);
+	box-shadow: 0.05em 0.05em;
 }
 
 /* Boxs da page-2 */
@@ -77,29 +165,37 @@ body, html {
 }
 
 .content-box1 {
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.5);
 	height: 80%;
 	width: 70%;
 	border-radius: 30px;
 	margin-left: 20%;
 	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
-.content-box1 > h3 {
-	color: yellow;
+.content-box1 > div > h3 {
+	color: #fbca1f;
 	text-align: center;
 	margin-top: 7px;
 }
 
 .content-box2 {
-	background-color: yellow;
+	background-color: rgba(0, 0, 0, 0.5);
 	height: 80%;
 	width: 70%;
 	border-radius: 30px;
 	margin-top: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
-.content-box2 > h3 {
-	color: black;
+.content-box2 > div > h3 {
+	color: #fbca1f;
 	text-align: center;
 	margin-top: 7px;
 }
@@ -125,9 +221,17 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: 0px;	
     padding: 3rem 3.5rem;
     width: 100%;
+}
+
+#footer-localization > h3 {
+	color: #fbca1f;
+}
+
+#footer-text > h3 {
+	color: #fbca1f;
 }
 
 #footer-text {
@@ -160,3 +264,10 @@ footer {
         gap: 2rem;
     }
 }
+
+@media screen and (max-width: 990px) {
+    .imagem-marketing{
+		visibility: hidden;
+	}
+}
+
