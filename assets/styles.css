@@ -12,7 +12,7 @@ body, html {
 	padding: 50px 80px;
 }
 
-h3 {
+.information-page > h3 {
 	text-transform: uppercase;
 	color: #111;
 	text-align: center;
@@ -92,67 +92,42 @@ h3 {
 }
 
 footer {
-    background-color: black;
-	width: 100%;
+    width: 100%;
+    color: white;
 }
 
-.conteudo-footer {
+#footer-content {
+    background-color: black;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     padding: 3rem 3.5rem;
     width: 100%;
 }
 
-.endereco {
-	color: white;
-	font-size: 12px;
+#footer-text {
+	margin-right: 50px;
 }
 
-.conteudo-footer, .icon-map {
-	color: yellow;
-}
-.endereco-icon {
-	margin-bottom: 10px;
+#footer-text > h1 { 
+    text-align: center;
 }
 
-.text-maps {
-	color: white;
-	font-size: 20px;
+#footer-copyright {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
 }
 
-.left-content > h1 {
-	text-align: center;
-}
-
-.left-content > p {
-	color: white;
-	font-size: 13px;
-	text-align: center;
-}
-
-.all-rights {
-	color: white;
-	font-size: 15px;
-}
-
-.container-all-rights {
-	display: flex;
-	justify-content: center;
-	height: 25%;
-	width: 100%;
-	margin-top: 0px;
-	border-top: 1px white solid;
-}
-
-.left-content {
-	display: flex;
-	justify-content: center;
-}
-
-/* Responsive footer */
 @media screen and (max-width: 768px) {
-    .conteudo-footer {
-        grid-template-columns: repeat(1, 1fr);
+    #footer-content {
+        grid-template-columns:repeat(1, 1fr);
         gap: 2rem;
     }
 }
