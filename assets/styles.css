@@ -166,7 +166,7 @@ button {
 
 .content-box1 {
 	background-color: rgba(0, 0, 0, 0.5);
-	height: 80%;
+	height: 100%;
 	width: 70%;
 	border-radius: 30px;
 	margin-left: 20%;
@@ -184,7 +184,7 @@ button {
 
 .content-box2 {
 	background-color: rgba(0, 0, 0, 0.5);
-	height: 80%;
+	height: 100%;
 	width: 70%;
 	border-radius: 30px;
 	margin-top: 10%;
@@ -251,23 +251,30 @@ footer {
     padding: 1.5rem;
     font-weight: 100;
 }
-
-@media screen and (max-width: 768px) {
-    #footer-content {
-        grid-template-columns:repeat(1, 1fr);
-        gap: 2rem;
-    }
-}
+/* Responsive adjustment */
 @media screen and (max-width: 768px) {
     .page-2-boxes {
-        grid-template-columns:repeat(1, 1fr);
+        display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+    }
+
+	.content-box1 {
+        margin-left: 0px;
+		width: 70%;
+		height: 100%;
+	}
+
+	.content-box2 {
+		height: 100%;
+		width: 70%;
+	}
+
+	#footer-content {
+        grid-template-columns:repeat(1, 2fr);
         gap: 2rem;
     }
 }
 
-@media screen and (max-width: 990px) {
-    .imagem-marketing{
-		visibility: hidden;
-	}
-}
 
