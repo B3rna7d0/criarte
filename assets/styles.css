@@ -10,6 +10,7 @@ body, html {
 	background-color: #fff;
 	text-align: justify;
 	padding: 50px 80px;
+	position: relative;
 }
 
 h3 {
@@ -275,6 +276,23 @@ footer {
         grid-template-columns:repeat(1, 2fr);
         gap: 2rem;
     }
+}
+@media screen and (max-width: 430px) {
+     .content-box1 {
+		margin-top: 250px;
+		width: auto;
+		height: auto;
+		margin-right: 40px;
+		margin-left: 40px;
+	 }
+	 .content-box2 {
+		width: auto;
+		height: auto;
+		margin-right: 40px;
+		margin-left: 40px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	 }
 }
 
 
