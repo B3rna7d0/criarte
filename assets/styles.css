@@ -3,6 +3,7 @@ body, html {
 	font: 16px 'Lato', sans-serif;
 	color: #777;
 	height: 100%;
+	background-color: #000;
 }
 
 .content {
@@ -39,6 +40,15 @@ p {
 	background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)),
 	url(imagens/back-corp.jpg);
 	background-size: cover;
+}
+
+.hidden {
+	opacity: 0;
+	transition: all 2s;
+}
+
+.show {
+	opacity: 1;
 }
 
 .box2 {
