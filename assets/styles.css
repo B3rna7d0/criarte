@@ -25,6 +25,16 @@ p {
 	color: white;
 }
 
+.contact, .icon {
+	width: 65px;
+	height: 65px;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	display: inline-flex;
+	cursor: pointer;
+}
+
 /*Efeito Parallax
 *****************/
 .box1, .box2 {
@@ -62,8 +72,7 @@ p {
 	width: 100%;
 	text-align: center;
 	background-color: #000000;
-
-	
+	cursor: pointer;
 }
 
 .content-title span.title {
@@ -262,6 +271,7 @@ footer {
     padding: 1.5rem;
     font-weight: 100;
 }
+
 /* Responsive adjustment */
 @media screen and (max-width: 768px) {
     .page-2-boxes {
