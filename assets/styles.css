@@ -9,9 +9,19 @@ body, html {
 .content {
 	color: #777;
 	background-color: #fff;
-	text-align: justify;
+	text-align: center;
 	padding: 50px 80px;
 	position: relative;
+}
+
+.content > h3 {
+	margin-top: -30px;
+}
+
+.content > p {
+	margin-bottom: 50px;
+	color: #000;
+	font-size: 17px;
 }
 
 h3 {
@@ -119,9 +129,6 @@ p {
 	color:#fff;
 }
 
-.content > p {
-	color: #000;
-}
 
 button {
 	background: #fbca1f;
@@ -166,6 +173,32 @@ button {
   .button-box-1, .button-box-2:active {
 	transform: translate(0.05em, 0.05em);
 	box-shadow: 0.05em 0.05em;
+}
+/* Services Cards */
+
+.father-div-sc {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 30px;
+} 
+
+.services-cards {
+	width: 100%;
+	height: 10rem;
+	background-color: transparent;
+	color: black;
+	text-align: center;
+}
+.services-cards > p {
+	color: black;
+	font-size: 30px;
+}
+
+.icons-sc {
+	width: 30%;
+	height: 40%;
 }
 
 /* Boxs da page-2 */
@@ -229,7 +262,7 @@ button {
 	bottom: 30px;
 	display: inline-flex;
 }
-
+/* Footer content */
 footer {
     width: 100%;
     color: white;
@@ -296,6 +329,10 @@ footer {
         grid-template-columns:repeat(1, 2fr);
         gap: 2rem;
     }
+	.father-div-sc {
+		grid-template-columns: repeat(1, 2fr);
+		gap: 300px, 30px;
+	}
 }
 @media screen and (max-width: 430px) {
      .content-box1 {
