@@ -17,10 +17,10 @@ const buttonMore = document.getElementById('btn-more');
 const modal = document.querySelector('dialog');
 const closeButton = document.querySelector('dialog button')
 
-buttonMore.onclick = () => {
+function openModal() {
     modal.showModal()
 }
 
-closeButton.onclick = () => {
+function closeModal() {
     modal.close()
 }
