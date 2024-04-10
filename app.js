@@ -12,3 +12,15 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+// modal-window
+const buttonMore = document.getElementById('btn-more');
+const modal = document.querySelector('dialog');
+const closeButton = document.querySelector('dialog button')
+
+buttonMore.onclick = () => {
+    modal.showModal()
+}
+
+closeButton.onclick = () => {
+    modal.close()
+}
