@@ -12,14 +12,3 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
-// Modal window
-function openModal() {
-    const modal = document.getElementById('window-modal')
-    modal.classList.add('opener')
-    
-    modal.addEventListener('click', (e) => {
-        if(e.target.id == 'close-button' || e.target.id == 'window-modal'){
-            modal.classList.remove('opener')
-        }
-    })
-}
