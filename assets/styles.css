@@ -9,16 +9,18 @@ html {
 
 .content {
 	color: #777;
-	background-color: #000;
 	text-align: center;
-	padding: 50px 80px;
+	padding: 110px 80px;
 	position: relative;
+	background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)),
+		url(imagens/lamp.jpg);
+	background-size: cover;
 }
 
 .content>h3 {
 	margin-top: -30px;
-	color: #fff;
-	font-weight: bold;
+	color: #ffff;
+	font-weight: bold;	
 	font-size: 35px;
 }
 
@@ -60,12 +62,100 @@ p {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	display: grid;
 }
 
-.box1 {
-	background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)),
-		url(imagens/back-corp.jpg);
+/*imagem main*/
+.card-container {
+	width: 700px;
+	height: 400px;
+	position: relative;
+	border-radius: 10px;
+  }
+  
+  .card-container::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)),
+		url(imagens/office.jpg);
 	background-size: cover;
+	transform: translate3d(0, 0, 0) scale(0.95);
+	filter: blur(20px);
+  }
+  
+  .card {
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	overflow: hidden;
+  }
+  
+  .card .img-content {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2)),
+		url(imagens/office.jpg);
+	background-size: cover;
+	transition: scale 0.6s, rotate 0.6s, filter 1s;
+  }
+  
+  .card .img-content svg {
+	width: 50px;
+	height: 50px;
+	fill: #e8e8e8;
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card .content-main {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 10px;
+	color: #e8e8e8;
+	padding: 20px;
+	line-height: 1.5;
+	border-radius: 5px;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(50px);
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card .content-main .heading {
+	padding-top: 40px;
+	font-size: 32px;
+	font-weight: 700;
+  }
+  
+  .card:hover .content-main {
+	opacity: 1;
+	transform: translateY(0);
+  }
+  
+  .card:hover .img-content {
+	scale: 2.5;
+	rotate: 30deg;
+	filter: blur(7px);
+  }
+  
+  .card:hover .img-content svg {
+	fill: transparent;
+  }
+.box1 {
+	background-color: black;
 }
 
 .hidden {
@@ -109,6 +199,10 @@ p {
 	/* Ajuste conforme necessário */
 	flex: 1;
 	display: flex;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	grid-column-gap: 0rem;
+	grid-row-gap: 30px;
 }
 
 .imagem-marketing {
@@ -215,27 +309,27 @@ button:active {
 
 .father-div-sc {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	grid-column-gap: 0rem;
 	grid-row-gap: 30px;
 }
 
 .services-cards {
-	width: 100%;
+	width: 300px;
 	height: 10rem;
 	color: #fff;
-	text-align: center;
+	text-align: left;
 }
 
 .services-cards>p {
 	color: #fff;
-	font-size: 30px;
+	font-size: 25px;
 }
 
 .icons-sc {
 	color: #fff;
-	font-size: 40px;
+	font-size: 35px;
 }
 
 /*Button style*/
@@ -305,14 +399,14 @@ button:active {
 }
 /* Modal-window styles */
 dialog::backdrop {
-	background-color: rgb(0, 0, 0 / .3);
+	background-color: rgb(0, 0, 0, 0.8);
 }
 
 dialog {
 	border: none;
 	border-radius: .5rem;
-	box-shadow: 0 0 1em rgb(0, 0, 0 / .3);
-	width: 80%;
+	box-shadow: 0 0 1em rgb(0, 0, 0, 0.8);
+	width: 60%;
 }
 
 dialog > p {
