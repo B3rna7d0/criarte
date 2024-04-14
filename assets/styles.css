@@ -12,8 +12,8 @@ html {
 	text-align: center;
 	padding: 110px 80px;
 	position: relative;
-	background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)),
-		url(imagens/lamp.jpg);
+	background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),
+		url(imagens/lamp.png);
 	background-size: cover;
 }
 
