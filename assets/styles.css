@@ -69,10 +69,13 @@ p {
 
 /*imagem main*/
 .card-container {
-	width: 700px;
-	height: 400px;
+	width: 850px;
+	height: 500px;
 	position: relative;
 	border-radius: 10px;
+	display: flex;
+	left: 800px;
+	bottom: 300px;
   }
   
   .card-container::before {
@@ -201,7 +204,8 @@ p {
 
 .container {
 	position: relative;
-	height: 100%;
+	height: 150%;
+	right: 14%;
 	/* Ajuste conforme necessário */
 	flex: 1;
     display: flex;
@@ -216,17 +220,19 @@ p {
 }
 
 .description-marketing {
+	width: 60%;
 	position: absolute;
-	left: 0;
+	left: 0px;
 	top: 50%;
 	transform: translateY(-50%);
-	padding: 20px;
+	padding: 20px; 
 }
 
 .description-marketing h1 {
 	margin-top: 0;
 	color: #fbca1f;
-	font-size: 50px;
+	font-size: 40px;
+	font-weight: bold;
 }
 
 .description-marketing p {
@@ -262,22 +268,18 @@ button:active {
 
 .btn-main {
 	border-radius: 3px;
-	width: 120px;
+	width: auto;
 	font-size: 17px;
 }
 
 .btn-main:hover {
 	background-color: #ffa500;
-	transition: 0.3s;
+	transition: 0.5s;
 }
 
 .btn-main p {
 	font-size: 17px;
-	color: #000;
-}
-
-.btn-main p:hover {
-	font-size: 18px;
+	color: #fff;
 }
 
 /*fim btn main */
