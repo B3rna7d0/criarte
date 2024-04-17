@@ -557,8 +557,17 @@ footer {
 	}
 
 	.father-div-sc {
-		grid-template-columns: repeat(1, 2fr);
+		grid-template-columns: repeat(3, 2fr);
 		gap: 300px, 30px;
+	}
+	.card-container {
+		display: none;
+		background: none;
+	}
+	.description-marketing {
+		left: 150px;
+		margin-bottom: -50px;
+		top: 450px;
 	}
 }
 
